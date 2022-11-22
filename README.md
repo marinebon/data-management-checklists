@@ -21,9 +21,24 @@
     * link to the dataset in OBIS/GBIF
     * update other info if needed
 
-## b. spatiotemporal gridded data
+## b. SpatioTemporal Gridded Data
 1. add your data to an ERDDAP server
 1. submit the gridded data form (TODO: create)
 1. fill out ERDDAP dataset update form (TODO)
     * link to the ERDDAP dataset
     * update other info if needed
+    * spatial resolution
+
+# III. report relevant metadata
+1. spatial coverage
+    * input WKT or shapefiles 
+    * required to be added to MBON activities map (NYI)
+    * coverage can be inferred from:
+        * ERDDAP link
+        * OBIS/GBIF link
+1. temporal coverage
+    * temporal span
+    * temporal granularity
+    * required to be added MBON activities gantt chart (NYI)
+1. ATN link
+2. NCEI link
