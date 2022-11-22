@@ -8,6 +8,7 @@
 1. further instructions will be provided based on the information given
 
 # II. domain-specific protocols
+
 ## a. Biological Occurrence Data
 1. standardize data to Darwin Core
     1. contact BioData Working Group for help
@@ -15,7 +16,14 @@
        * join one of the open meetings
 1. upload your data to an IPT for (OBIS&|GBIF)
     1. contact your (OBIS&|GBIF) node manager for help
+1. get the link to your dataset in OBIS/GBIF
+1. fill out biodata dataset update form (TODO)
+    * link to the dataset in OBIS/GBIF
+    * update other info if needed
 
 ## b. spatiotemporal gridded data
 1. add your data to an ERDDAP server
 1. submit the gridded data form (TODO: create)
+1. fill out ERDDAP dataset update form (TODO)
+    * link to the ERDDAP dataset
+    * update other info if needed
