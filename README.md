@@ -10,7 +10,7 @@
 # II. domain-specific protocols
 
 ## a. Biological Occurrence Data
-1. standardize data to Darwin Core
+1. standardize data to Darwin Core (see sub-checklist + diagram [here](https://github.com/ioos/bio_mobilization_workshop/pull/28))
     1. contact BioData Working Group for help
        * [via gh-issues](https://github.com/ioos/bio_data_guide/issues)
        * join one of the open meetings
