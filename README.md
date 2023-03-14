@@ -1,5 +1,11 @@
 # data-management-checklists
-[DRAFT] data management protocol checklists containing recommendations from the MBON Data Management Working Group
+:warning: this project is under construction and not yet usable. :warning:
+
+The checklists here are the entrypoint for MBON-supported datasets.
+Anyone can submit a dataset in any state of development.
+The checklists here will walk you through recommended methods for managing data from planning through publication.
+Methods differ by region, data type, and research domain - this is a tremendous amount of complexity to consider, if ever you reach a dead end, please open an issue.
+
 
 # I. ALL DATA
 1. submit the MBON-facilitated data resource form (TODO: create)
