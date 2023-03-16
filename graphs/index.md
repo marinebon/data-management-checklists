@@ -9,36 +9,34 @@ REGISTER((Register Dataset \n By Creating \n GitHub Issue))
 
 REGISTER -- upload raw data --> NCEI[(NCEI)]
 
-REGISTER --> THEMATIC{Select \n thematic \n MBONs.} 
+REGISTER --> THEMATIC{Select \n Data Types} 
 
-THEMATIC --> TAXA([Taxonomic occurrences])
-  TAXA -- format in DwC --> DWC[(OBIS+GBIF)]
-  %% DWC --> OBIS
-  %% DWC --> GBIF
-THEMATIC --> DNA([DNA])
-  DNA -- ? --> DWC
-THEMATIC --> ACOUSTICS([Acoustics])
-  %% ACOUSTICS --> PASSIVE[passive]
-  %% ACOUSTICS --> ACTIVE[active]
-THEMATIC --> IMAGE([Imaging])
-  IMAGE -- ? --> DWC
-THEMATIC --> TRACKING([Animal tracking])
-  TRACKING -- ? --> ATN[(ATN)]
-  TRACKING -- ? --> DWC
-THEMATIC --> OPTICAL([Optics])
-  OPTICAL -- ? --> SEABASS
-REGISTER --> IF_GRIDDED{If data \n is gridded}
-IF_GRIDDED --> ERDDAP[(ERDDAP)]
-IF_GRIDDED --> COG
-
-ERDDAP -- ? --> PORTAL[[MBON data portal]]
+THEMATIC --> TAXA((taxonomic \n occurrences)) 
+  --> DWC_ALIGN{manually \n align to DwC} 
+  --> DWC[(OBIS+GBIF)]
+THEMATIC --> DNA((DNA)) 
+  --> DWC_ALIGN
+THEMATIC -- acoustics --> ACOUSTICS_DB[(?)]
+  -- ? --> DWC_ALIGN
+THEMATIC -- imaging --> IMAGE_DB[(?)]
+  -- ? --> DWC_ALIGN
+THEMATIC -- Animal tracking --> ATN[(ATN)]
+  -- ? --> DWC_ALIGN
+THEMATIC -- optics --> SEABASS
+THEMATIC --> GRIDDED((Gridded \n Spatiotemporal))
+GRIDDED --> ERDDAP_FMT{Host dataset \n on ERDDAP} 
+  --> ERDDAP[(ERDDAP)]
+GRIDDED --> COG{create COGs} --> COG_DB[(?)]
+  --> INDICATORS
 
 DWC --> INDICATORS
-COG --> INDICATORS
 ERDDAP --> INDICATORS
+INDICATORS[[Indicator Dev \n Workgroup]]
 
-INDICATORS[Indicator Dev Workgroup]
+CKAN -- ? --> PORTAL
+ERDDAP -- ? --> PORTAL[[MBON data portal]]
 
 click REGISTER "https://github.com/marinebon/dataset-registry/issues"
+click DWC_ALIGN "https://ioos.github.io/mbon-docs/mbon-data-flow.html#darwin-core-alignment"
 
 ```
