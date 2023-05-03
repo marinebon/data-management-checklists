@@ -1,5 +1,4 @@
 ```mermaid
-
 graph TD
 
 REGISTER((Register Dataset \n By Creating \n GitHub Issue)) 
@@ -38,8 +37,17 @@ INDICATORS[[Indicator Dev \n Workgroup]]
 CKAN[(CKAN)] -- ? --> PORTAL
 ERDDAP -- ? --> PORTAL[[MBON data portal]]
 
+%% this "clickable" class works magically? 
+classDef clickable color:#25f,text-decoration: underline
+
+%% custom classes
+classDef popupsubgraph color:#2ff,text-decoration: underline
+
+%% sub-graphs from within this repo
+click DWC_ALIGN "https://ioos.github.io/mbon-docs/mbon-data-flow.html#darwin-core-alignment"
+DWC_ALIGN:::popupsubgraph
+
+%% external links
 click MAP "https://github.com/marinebon/map-of-activities"
 click REGISTER "https://github.com/marinebon/dataset-registry/issues"
-click DWC_ALIGN "https://ioos.github.io/mbon-docs/mbon-data-flow.html#darwin-core-alignment"
-
 ```
