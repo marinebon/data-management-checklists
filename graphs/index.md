@@ -5,6 +5,8 @@ graph TD
 REGISTER((Register Dataset \n By Creating \n GitHub Issue)) 
   -- send metadata --> BIOECO[(BioEco Portal & ODIS)]
 
+BIOECO --> MAP[[US MBON Map of Activities]]
+
 %% REGISTER --> REGIONAL{Select \n regional MBONs.}
 
 REGISTER -- upload raw data --> NCEI[(NCEI)]
@@ -33,9 +35,10 @@ DWC --> INDICATORS
 ERDDAP --> INDICATORS
 INDICATORS[[Indicator Dev \n Workgroup]]
 
-CKAN -- ? --> PORTAL
+CKAN[(CKAN)] -- ? --> PORTAL
 ERDDAP -- ? --> PORTAL[[MBON data portal]]
 
+click MAP "https://github.com/marinebon/map-of-activities"
 click REGISTER "https://github.com/marinebon/dataset-registry/issues"
 click DWC_ALIGN "https://ioos.github.io/mbon-docs/mbon-data-flow.html#darwin-core-alignment"
 
