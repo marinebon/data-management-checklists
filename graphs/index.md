@@ -7,8 +7,10 @@ REGISTER((Register Dataset \n By Creating \n GitHub Issue))
 BIOECO --> MAP[[US MBON Map of Activities]]
 
 %% REGISTER --> REGIONAL{Select \n regional MBONs.}
+REGISTER --> ERDDAP_FMT{Host dataset \n on MBON \n RA ERDDAP}
+  --> ERDDAP[(ERDDAP)]
 
-REGISTER -- upload raw data --> NCEI[(NCEI)]
+ERDDAP -- upload raw data --> NCEI[(NCEI)]
 
 REGISTER --> THEMATIC{Select \n Data Types} 
 
@@ -23,15 +25,16 @@ THEMATIC -- imaging --> IMAGE_DB[(?)]
   -- ? --> DWC_ALIGN
 THEMATIC -- Animal tracking --> ATN[(ATN)]
   -- ? --> DWC_ALIGN
-THEMATIC -- optics --> SEABASS
+THEMATIC -- optics --> SEABASS 
+
 THEMATIC --> GRIDDED((Gridded \n Spatiotemporal))
-GRIDDED --> ERDDAP_FMT{Host dataset \n on ERDDAP} 
-  --> ERDDAP[(ERDDAP)]
 GRIDDED --> COG{create COGs} --> COG_DB[(?)]
   --> INDICATORS
 
 DWC --> INDICATORS
 ERDDAP --> INDICATORS
+
+%% === working groups
 INDICATORS[[Indicator Dev \n Workgroup]]
 
 CKAN[(CKAN)] -- ? --> PORTAL
